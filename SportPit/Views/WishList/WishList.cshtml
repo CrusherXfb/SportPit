@@ -1,0 +1,23 @@
+﻿@* @model WishList
+
+<div class="container">
+    <h1 class="mt-3">Список желаемого: </h1>
+    <div class="row row-cols-4 gap-3 mt-4">
+        @if (Model.Products is null || Model.Products.Count == 0)
+        {
+            <h1>Нет пока продуктов в списке желаемого</h1>
+        }
+        else
+        {
+            @foreach (var product in Model.Products)
+            {
+                <div class="card" style="width: 18rem;">
+                    <img src="@Products.Img" class="card-img-top" alt="@Products.Title">
+                    <div class="card-body">
+                        <h5 class="card-title">@Products.Title</h5>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div> *@
